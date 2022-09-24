@@ -4,9 +4,17 @@
 }
 
 %container {
-  width: 1200px;
+  max-width: 450px;
   padding: 0 15px;
   margin: 0 auto;
+
+  @media screen and (min-width: 768px) {
+    width: 738px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
 }
 
 %section {
