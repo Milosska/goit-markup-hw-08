@@ -1,0 +1,42 @@
+.partners {
+  @extend %section;
+}
+.partners__container {
+  @extend %container;
+}
+.partners__heading {
+  @extend %heading;
+  margin-bottom: 50px;
+}
+.partners__list {
+  @extend %list;
+  @include flex-l(30px);
+}
+.partners__link {
+  @extend %link;
+  display: block;
+  width: 170px;
+  height: 92px;
+
+  @include flex-m;
+
+  color: map-get($decolors, 'social-icons');
+  border: 1px solid map-get($decolors, 'social-icons');
+  border-radius: 4px;
+
+  @include animation(border-color);
+
+  &:hover,
+  &:focus {
+    border: 1px solid map-get($txtcolor, 'text-accent');
+  }
+}
+.partners__icon {
+  @include svg(106px, 60px);
+
+  .partners__link:hover &,
+  .partners__link:focus & {
+    color: map-get($txtcolor, 'text-accent');
+    @include animation(color);
+  }
+}

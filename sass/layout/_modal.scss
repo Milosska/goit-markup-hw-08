@@ -1,0 +1,204 @@
+.backdrop {
+  @include position(fixed);
+  width: 100%;
+  height: 100%;
+  background-color: map-get($bgcolor, 'modal-window');
+  opacity: 1;
+
+  @include animation(opacity);
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    /* visibility: hidden; */
+  }
+}
+
+// /*---------------------------------- модалка -----------------------------*/
+.modal {
+  @include position(absolute, 50%, 50%);
+  padding: 40px;
+  transform: translate(-50%, -50%) scale(1);
+  @include animation(transform);
+
+  width: 528px;
+  height: 581px;
+  border-radius: 4px;
+
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+}
+
+.modal__btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  @include flex-m;
+
+  width: 30px;
+  height: 30px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  color: map-get($bgcolor, 'header');
+  @include animation(color);
+
+  &:hover,
+  &:focus {
+    color: map-get($decolors, 'btn-accent');
+  }
+}
+.modal__icon {
+  @include svg(18px, 18px);
+}
+
+// /*----------------------------- форма модалки --------------------------*/
+.clientform__title {
+  margin-bottom: 12px;
+  padding: 0;
+  text-align: center;
+
+  font-weight: 700;
+  @include font-size(20px, 23px);
+  color: map-get($txtcolor, 'header');
+}
+
+.clientform__label {
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+
+  &:nth-child(5) {
+    margin-bottom: 20px;
+  }
+
+  &:nth-child(6) {
+    @include flex-l(8px);
+    margin-bottom: 30px;
+  }
+}
+
+.clientform__name {
+  display: block;
+  margin-bottom: 4px;
+  @include font-size(12px, 14px);
+  letter-spacing: 0.01em;
+}
+
+.clientform__imput {
+  display: block;
+  width: 450px;
+  height: 40px;
+  padding: 12px 12px 12px 42px;
+
+  outline: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  color: map-get($txtcolor, 'header');
+  @include animation(border-color);
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    border: 1px solid map-get($txtcolor, 'text-accent');
+  }
+}
+
+.clientform__icon {
+  @include position(absolute, 50%, 12px);
+  color: map-get($txtcolor, 'header');
+  @include svg(18px, 18px);
+
+  @include animation(fill);
+
+  .clientform__imput:hover + &,
+  .clientform__imput:focus + &,
+  .clientform__imput:focus-within + & {
+    fill: map-get($txtcolor, 'text-accent');
+  }
+}
+
+.clientform__textarea {
+  display: block;
+  width: 450px;
+  height: 120px;
+  resize: none;
+
+  padding: 12px;
+  margin-bottom: 20px;
+
+  outline: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  @include animation(border-color);
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    border: 1px solid map-get($txtcolor, 'text-accent');
+  }
+
+  &::placeholder {
+    @include font-size(12px, 14px);
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.clientform__checkbox {
+  @extend %visually-hidden;
+}
+
+.clientform__field {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  margin: 0;
+
+  border: 3px solid #212121;
+  border-radius: 2px;
+
+  @include animation-m(border-color, background-image);
+
+  &:hover,
+  &:focus {
+    border-color: map-get($txtcolor, 'text-accent');
+  }
+
+  .clientform__checkbox:checked ~ & {
+    background-image: url(../../images/icon-check.svg);
+    background-size: cover;
+    background-position: center;
+    background-origin: border-box;
+    border-color: map-get($txtcolor, 'text-accent');
+  }
+}
+
+.clientform__agreement {
+  @include font-size(14px, 24px);
+}
+
+.clientform__link {
+  color: map-get($txtcolor, 'text-accent');
+}
+
+.clientform__btn {
+  padding: 10px 52px;
+  background-color: map-get($decolors, 'btn-accent');
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  font-weight: 700;
+  @include font-size(16px, 30px);
+  letter-spacing: 0.06em;
+  color: map-get($txtcolor, 'effects');
+}

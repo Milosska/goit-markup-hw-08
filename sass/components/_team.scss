@@ -1,0 +1,59 @@
+.team {
+  @extend %section;
+  background-color: map-get($bgcolor, 'accent');
+}
+.team__container {
+  @extend %container;
+}
+.team__heading {
+  @extend %heading;
+  margin-bottom: 50px;
+}
+.team__list {
+  @extend %list;
+  @include flex-l(30px);
+}
+.team__item {
+  background-color: map-get($bgcolor, 'main');
+  width: 270px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.socials {
+  padding: 30px 0;
+  text-align: center;
+}
+.socials__headline {
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  @include font-size(16px, 19px);
+  letter-spacing: 0.03em;
+  color: map-get($txtcolor, 'header');
+}
+.socials__text {
+  @include font-size(16px, 19px);
+}
+.socials__list {
+  @extend %list;
+  @include flex-l(10px);
+  margin-top: 16px;
+}
+.social__link {
+  @extend %link;
+  @include socials(map-get($bgcolor, 'main'), map-get($decolors, 'btn-accent'));
+  color: map-get($decolors, 'social-icons');
+}
+.social__icon {
+  width: 20px;
+  height: 20px;
+  color: inherit;
+  fill: currentColor;
+  @include animation(fill);
+
+  .social__link:hover &,
+  .social__link:focus & {
+    fill: map-get($txtcolor, 'effects');
+  }
+}

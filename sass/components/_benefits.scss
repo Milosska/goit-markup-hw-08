@@ -1,0 +1,53 @@
+.benefits {
+  @extend %section;
+  background-color: map-get($bgcolor, 'main');
+}
+.benefits__container {
+  @extend %container;
+}
+.benefits__header {
+  @extend %visually-hidden;
+}
+.benefits__list {
+  @extend %list;
+  @include flex-m(space-between, flex-start);
+}
+.benefits__item {
+  width: calc(100% - 90px / 4);
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &::before {
+    @include pseudo(270px, 120px);
+    display: inline-block;
+    margin-bottom: 30px;
+
+    background-color: map-get($bgcolor, 'accent');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 70px 70px;
+  }
+}
+
+$pictureList: 'antenna', 'clock', 'diagram', 'astronaut';
+@each $picture in $pictureList {
+  .benefits__#{$picture}::before {
+    background-image: url('../../images/audvantages/#{$picture}.svg');
+  }
+}
+
+.benefits__headline {
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  @include font-size();
+  color: map-get($txtcolor, 'header');
+}
+
+.benefits__text {
+  @include font-size(14px, 24px);
+}

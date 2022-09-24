@@ -1,0 +1,42 @@
+.hero {
+  max-width: 1600px;
+  height: 600px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  @extend %centred;
+  background-color: map-get($bgcolor, 'footer');
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../../images/hero-bcg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  text-align: center;
+}
+.hero__container {
+  @extend %container;
+}
+.hero__title {
+  @extend %centred;
+  margin-bottom: 30px;
+  max-width: 696px;
+
+  font-weight: 900;
+  @include font-size(44px, 60px);
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: map-get($txtcolor, 'effects');
+}
+.hero__btn {
+  display: inline-block;
+  padding: 10px 32px;
+  min-width: 216px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  background-color: map-get($decolors, 'btn-accent');
+  color: map-get($txtcolor, 'effects');
+  font-weight: 700;
+  @include font-size(16px, 30px);
+  text-align: center;
+  letter-spacing: 0.06em;
+}

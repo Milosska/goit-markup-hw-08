@@ -1,0 +1,101 @@
+.header {
+  border-bottom: 1px solid map-get($decolors, 'header-line');
+}
+.header__container {
+  @extend %container;
+  @include flex-s;
+}
+.nav {
+  @include flex-s;
+}
+.logo {
+  @extend %link;
+  color: map-get($txtcolor, 'logo');
+  font-family: $secondary;
+  font-weight: 700;
+  @include font-size(26px, 31px);
+  letter-spacing: 0.03em;
+}
+.nav__logo {
+  margin-right: 93px;
+}
+.logo__accent {
+  color: map-get($txtcolor, 'text-accent');
+}
+.nav__list {
+  @extend %list;
+  display: flex;
+}
+.nav__item {
+  position: relative;
+  color: map-get($txtcolor, 'header');
+
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+.nav__link,
+.contacts__link {
+  @extend %link;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  font-weight: 500;
+  @include font-size();
+  letter-spacing: 0.02em;
+}
+.nav__link {
+  display: inline-block;
+  color: var(--header-color);
+  @include animation(color);
+
+  &:hover,
+  &:focus {
+    color: map-get($txtcolor, 'text-accent');
+  }
+
+  &--current {
+    color: map-get($txtcolor, 'text-accent');
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      display: inline-block;
+      content: '';
+      width: 100%;
+      height: 4px;
+      background-color: map-get($txtcolor, 'text-accent');
+      border-radius: 2px;
+    }
+  }
+}
+
+.contacts {
+  @extend %list;
+  @include flex-s;
+  margin-left: auto;
+}
+.contacts__item:first-child {
+  margin-right: 50px;
+}
+.contacts__link {
+  @include flex-s;
+
+  color: var(--main-text-color);
+  @include animation(color);
+
+  &:hover,
+  &:focus {
+    color: map-get($txtcolor, 'text-accent');
+  }
+}
+
+.contacts__icon {
+  @include svg(16px, 12px);
+  margin-right: 10px;
+
+  &:last-child {
+    height: 16px;
+  }
+}

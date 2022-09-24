@@ -1,0 +1,126 @@
+.portfolio {
+  @extend %section;
+}
+.portfolio__container {
+  @extend %container;
+}
+.portfolio__title {
+  @extend %visually-hidden;
+}
+
+/* ==================== buttons list ================ */
+.buttons {
+  @extend %list;
+  @include flex-m;
+  margin-bottom: 50px;
+}
+
+.buttons__item {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+.buttons__btn {
+  display: inline-block;
+  padding: 6px 22px;
+
+  font-family: inherit;
+  font-weight: 500;
+  @include font-size(16px, 26px);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: map-get($txtcolor, 'header');
+  background-color: map-get($bgcolor, 'accent');
+
+  @include animation-l(color, background-color, box-shadow);
+
+  &:hover,
+  &:focus {
+    color: map-get($txtcolor, 'effects');
+    background-color: map-get($decolors, 'btn-accent');
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+/* ======================= works list ==================== */
+.works {
+  @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -30px;
+  margin-bottom: -30px;
+}
+
+.works__item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.works__link {
+  @extend %link;
+  @include animation(box-shadow);
+
+  &:hover,
+  &:focus {
+    display: block;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+/* =========================== overlay ======================== */
+.works__thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.works__overlay {
+  position: absolute;
+  bottom: 0;
+
+  transform: translateY(100%);
+  opacity: 0;
+  @include animation-m(transform, opacity);
+
+  @include flex-s;
+  width: 100%;
+  height: 100%;
+  background-color: map-get($bgcolor, 'cards-hover');
+
+  .works__link:hover &,
+  .works__link:focus & {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.works__explanation {
+  display: inline-block;
+  padding: 0 24px;
+
+  @include font-size(18px, 28px);
+  color: map-get($txtcolor, 'effects');
+}
+
+/* =========================== card description ======================== */
+.works__shadow {
+  padding: 20px 24px;
+  border: 1px solid map-get($decolors, 'portfolio-border');
+  border-top: none;
+}
+
+.works__title {
+  margin-bottom: 4px;
+  font-weight: 700;
+  @include font-size(18px, 36px);
+  letter-spacing: 0.06em;
+  color: map-get($txtcolor, 'header');
+}
+
+.works__text {
+  @include font-size(16px, 30px);
+  letter-spacing: 0.03em;
+}

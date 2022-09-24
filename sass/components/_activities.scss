@@ -1,0 +1,34 @@
+.activities {
+  @extend %section;
+  padding-top: 0;
+  background-color: map-get($bgcolor, 'main');
+}
+.activities__container {
+  @extend %container;
+}
+.activities__list {
+  @extend %list;
+}
+.activities__heading {
+  @extend %heading;
+  margin-bottom: 50px;
+}
+.activities__list {
+  @include flex-l(30px);
+}
+.activities__item {
+  position: relative;
+}
+.activities__text {
+  position: absolute;
+  bottom: 0;
+
+  @include flex-m;
+  width: 100%;
+  height: 70px;
+  background-color: map-get($bgcolor, 'activities');
+
+  font-weight: 700;
+  text-transform: uppercase;
+  color: map-get($txtcolor, 'effects');
+}
