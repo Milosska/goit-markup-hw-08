@@ -72,3 +72,16 @@
     background-color: $hoverbg;
   }
 }
+
+/* ============================ media pattern ======================*/
+@mixin media($max-or-min: min, $device) {
+  @if $max-or-min == max {
+    @media screen and (#{$max-or-min}-width: (map-get($breakpoints, '#{$device}') - 1px)) {
+      @content;
+    }
+  } @else {
+    @media screen and (#{$max-or-min}-width: map-get($breakpoints, '#{$device}')) {
+      @content;
+    }
+  }
+}
