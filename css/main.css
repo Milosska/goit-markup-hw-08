@@ -39,7 +39,7 @@ button {
 
 /* ================= main placeholders ===============*/
 .header__container {
-  max-width: 450px;
+  width: 450px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -52,6 +52,11 @@ button {
   .header__container {
     width: 1200px;
   }
+}
+
+.logo {
+  text-decoration: none;
+  color: var(--main-text-color);
 }
 
 /* =================== visually-hidden =================*/
@@ -67,4 +72,42 @@ button {
 /* ============================ media pattern ======================*/
 .header {
   border-bottom: 1px solid #ececec;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo {
+  display: inline-block;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  color: #000000;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.1666666667;
+  letter-spacing: 0.03em;
+}
+
+.logo__accent {
+  color: #2196f3;
+}
+
+.mobile {
+  margin-left: auto;
+}
+
+.mobile__btn {
+  width: 40px;
+  height: 40px;
+}
+
+.nav__list {
+  display: none;
 }/*# sourceMappingURL=main.css.map */

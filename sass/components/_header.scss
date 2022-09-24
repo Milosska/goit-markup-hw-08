@@ -6,27 +6,51 @@
   @extend %container;
 }
 
+.nav {
+  @include flex-s;
+}
+
+.logo {
+  @extend %link;
+
+  display: inline-block;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  color: map-get($txtcolor, 'logo');
+  font-family: $secondary;
+  font-weight: 700;
+  @include font-size(24px, 28px);
+  letter-spacing: 0.03em;
+}
+
+.logo__accent {
+  color: map-get($txtcolor, 'text-accent');
+}
+
+.mobile {
+  margin-left: auto;
+}
+
+.mobile__btn {
+  width: 40px;
+  height: 40px;
+}
+
+.nav__list {
+  display: none;
+}
+
 // .header__container {
-//   @extend %container;
-//   @include flex-s;
-// }
-// .nav {
 //   @include flex-s;
 // }
 // .logo {
-//   @extend %link;
-//   color: map-get($txtcolor, 'logo');
-//   font-family: $secondary;
-//   font-weight: 700;
 //   @include font-size(26px, 31px);
-//   letter-spacing: 0.03em;
 // }
 // .nav__logo {
 //   margin-right: 93px;
 // }
-// .logo__accent {
-//   color: map-get($txtcolor, 'text-accent');
-// }
+
 // .nav__list {
 //   @extend %list;
 //   display: flex;
