@@ -76,7 +76,7 @@
 /* ============================ media pattern ======================*/
 @mixin media($max-or-min: min, $device) {
   @if $max-or-min == max {
-    @media screen and (#{$max-or-min}-width: (map-get($breakpoints, '#{$device}') - 1px)) {
+    @media screen and (#{$max-or-min}-width: (map-get($breakpoints, '#{$device}') - 0.5px)) {
       @content;
     }
   } @else {

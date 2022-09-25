@@ -33,7 +33,7 @@
 
 %link {
   text-decoration: none;
-  color: var(--main-text-color);
+  color: map-get($txtcolor, 'main');
 }
 
 /* =================== visually-hidden =================*/
