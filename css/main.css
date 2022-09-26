@@ -38,22 +38,22 @@ button {
 }
 
 /* ================= main placeholders ===============*/
-.header__container {
+.hero__container, .header__container {
   padding: 0 15px;
   margin: 0 auto;
 }
 @media screen and (min-width: 480px) {
-  .header__container {
+  .hero__container, .header__container {
     width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
-  .header__container {
+  .hero__container, .header__container {
     width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .header__container {
+  .hero__container, .header__container {
     width: 1200px;
   }
 }
@@ -71,6 +71,11 @@ button {
 
 /* =================== visually-hidden =================*/
 /* =================== centerd element pattern =================*/
+.hero__title, .hero {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* =================== section heading pattern =================*/
 /* ====================== line height calculation =======================*/
 /* ============================ flex patterns ===========================*/
@@ -411,4 +416,44 @@ button {
   font-size: 18px;
   line-height: 1.2222222222;
   color: #2196f3;
+}
+
+.hero {
+  max-width: 1600px;
+  height: 600px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-color: #2f303a;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../../images/hero-bcg.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/hero-bcg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.hero__title {
+  margin-bottom: 30px;
+  max-width: 696px;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.3636363636;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.hero__btn {
+  display: inline-block;
+  padding: 10px 32px;
+  min-width: 216px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: #2196f3;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  text-align: center;
+  letter-spacing: 0.06em;
 }/*# sourceMappingURL=main.css.map */

@@ -269,15 +269,6 @@
       @include svg(16px, 12px);
     }
   }
-
-  // @include media(min, desktop) {
-  //   &:first-child {
-  //     @include svg(14px, 10px);
-  //   }
-  //   &:last-child {
-  //     @include svg(10px, 14px);
-  //   }
-  // }
 }
 
 .nav-socials {
