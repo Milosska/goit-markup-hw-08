@@ -35,6 +35,11 @@
     padding-bottom: 26px;
     margin-right: 88px;
   }
+
+  @include media(min, desktop) {
+    @include font-size(26px, 31px);
+    margin-right: 93px;
+  }
 }
 
 .logo__accent {
@@ -187,18 +192,33 @@
   }
 
   @include media(min, tablet) {
-    margin-left: 96px;
+    display: flex;
+    flex-direction: column-reverse;
+
+    margin-left: 90px;
+  }
+
+  @include media(min, desktop) {
+    flex-direction: row-reverse;
+    @include flex-l(30px);
+    margin-left: 315px;
   }
 }
 
 .contacts__item {
-  &:not(:last-child) {
-    margin-bottom: 32px;
+  @include media(max, tablet) {
+    &:first-child {
+      margin-bottom: 32px;
+    }
   }
 
-  @include media(min, tablet) {
-    &:not(:last-child) {
+  &:last-child {
+    @include media(min, tablet) {
       margin-bottom: 10px;
+    }
+
+    @include media(min, desktop) {
+      margin-bottom: 0;
     }
   }
 }
@@ -234,12 +254,30 @@
 
   margin-right: 8px;
 
-  &:first-child {
-    @include svg(14px, 10px);
-  }
-  &:last-child {
+  &--smartphone {
     @include svg(10px, 14px);
+
+    @include media(min, desktop) {
+      @include svg(10px, 16px);
+    }
   }
+
+  &--envelope {
+    @include svg(14px, 10px);
+
+    @include media(min, desktop) {
+      @include svg(16px, 12px);
+    }
+  }
+
+  // @include media(min, desktop) {
+  //   &:first-child {
+  //     @include svg(14px, 10px);
+  //   }
+  //   &:last-child {
+  //     @include svg(10px, 14px);
+  //   }
+  // }
 }
 
 .nav-socials {
@@ -268,12 +306,6 @@
 
 // .header__container {
 //   @include flex-s;
-// }
-// .logo {
-//   @include font-size(26px, 31px);
-// }
-// .nav__logo {
-//   margin-right: 93px;
 // }
 
 // .contacts {

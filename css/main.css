@@ -127,6 +127,13 @@ button {
     margin-right: 88px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.1923076923;
+    margin-right: 93px;
+  }
+}
 
 .logo__accent {
   color: #2196f3;
@@ -270,16 +277,49 @@ button {
 }
 @media screen and (min-width: 768px) {
   .contacts {
-    margin-left: 96px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    margin-left: 90px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 315px;
   }
 }
 
-.contacts__item:not(:last-child) {
-  margin-bottom: 32px;
+@media screen and (max-width: 767.5px) {
+  .contacts__item:first-child {
+    margin-bottom: 32px;
+  }
 }
 @media screen and (min-width: 768px) {
-  .contacts__item:not(:last-child) {
+  .contacts__item:last-child {
     margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__item:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -318,15 +358,29 @@ button {
     display: none;
   }
 }
-.contacts__icon:first-child {
+.contacts__icon--smartphone {
+  width: 10px;
+  height: 14px;
+  fill: currentColor;
+}
+@media screen and (min-width: 1200px) {
+  .contacts__icon--smartphone {
+    width: 10px;
+    height: 16px;
+    fill: currentColor;
+  }
+}
+.contacts__icon--envelope {
   width: 14px;
   height: 10px;
   fill: currentColor;
 }
-.contacts__icon:last-child {
-  width: 10px;
-  height: 14px;
-  fill: currentColor;
+@media screen and (min-width: 1200px) {
+  .contacts__icon--envelope {
+    width: 16px;
+    height: 12px;
+    fill: currentColor;
+  }
 }
 
 .nav-socials {
