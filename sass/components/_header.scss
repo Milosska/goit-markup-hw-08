@@ -83,11 +83,11 @@
   width: 40px;
   height: 40px;
   fill: currentColor;
-  @include animation(color);
+  @include animation(fill);
 
   .mobile__btn:hover &,
   .mobile__btn:focus & {
-    color: map-get($txtcolor, 'text-accent');
+    fill: map-get($txtcolor, 'text-accent');
   }
 }
 
@@ -225,6 +225,7 @@
 
 .contacts__link {
   @extend %link;
+  color: inherit;
   @include animation(color);
 
   @include media(max, tablet) {
@@ -294,35 +295,3 @@
   @include font-size(18px, 22px);
   color: map-get($txtcolor, 'text-accent');
 }
-
-// .header__container {
-//   @include flex-s;
-// }
-
-// .contacts {
-//  @include flex-s;
-//   margin-left: auto;
-// }
-// .contacts__item:first-child {
-//   margin-right: 50px;
-// }
-// .contacts__link {
-//   @include flex-s;
-
-//   color: var(--main-text-color);
-//   @include animation(color);
-
-//   &:hover,
-//   &:focus {
-//     color: map-get($txtcolor, 'text-accent');
-//   }
-// }
-
-// .contacts__icon {
-//   @include svg(16px, 12px);
-//   margin-right: 10px;
-
-//   &:last-child {
-//     height: 16px;
-//   }
-// }

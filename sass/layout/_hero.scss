@@ -1,36 +1,56 @@
 .hero {
-  max-width: 1600px;
-  height: 600px;
-  padding-top: 200px;
-  padding-bottom: 200px;
   @extend %centred;
+  max-width: 480px;
+  height: 400px;
+  padding: 118px 0;
+
   background-color: map-get($bgcolor, 'footer');
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url('../../images/hero-bcg.jpg');
+    url('../../images/hero/hero-mobile.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 
-  text-align: center;
+  @include media(min, tablet) {
+    max-width: 768px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../../images/hero/hero-tablet.jpg');
+  }
+
+  @include media(min, desktop) {
+    max-width: 1600px;
+    height: 600px;
+    padding: 200px 0;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../../images/hero/hero-desktop.jpg');
+  }
 }
+
 .hero__container {
   @extend %container;
 }
+
 .hero__title {
   @extend %centred;
   margin-bottom: 30px;
-  max-width: 696px;
+  max-width: 360px;
 
   font-weight: 900;
-  @include font-size(44px, 60px);
+  @include font-size(26px, 42px);
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: map-get($txtcolor, 'effects');
+
+  @include media(min, desktop) {
+    max-width: 696px;
+    @include font-size(44px, 60px);
+  }
 }
+
 .hero__btn {
-  display: inline-block;
-  padding: 10px 32px;
-  min-width: 216px;
+  @extend %centred;
+  padding: 10px 24px;
+  min-width: 200px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   background-color: map-get($decolors, 'btn-accent');
@@ -39,4 +59,9 @@
   @include font-size(16px, 30px);
   text-align: center;
   letter-spacing: 0.06em;
+
+  @include media(min, desktop) {
+    padding: 10px 32px;
+    min-width: 216px;
+  }
 }
