@@ -1,7 +1,7 @@
 /* ====================== line height calculation =======================*/
 @mixin font-size($size: 14px, $height: 16px) {
   font-size: $size;
-  line-height: $height / $size;
+  line-height: calc($height / $size);
 }
 
 /* ============================ flex patterns ===========================*/

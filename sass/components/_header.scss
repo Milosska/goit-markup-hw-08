@@ -228,6 +228,14 @@
   color: inherit;
   @include animation(color);
 
+  @include flex-s;
+  @include font-size(12px, 14px);
+
+  &:hover,
+  &:focus {
+    color: map-get($txtcolor, 'text-accent');
+  }
+
   @include media(max, tablet) {
     &--big {
       @include font-size(34px, 40px);
@@ -239,12 +247,10 @@
     }
   }
 
-  @include flex-s;
-  @include font-size(12px, 14px);
-
-  &:hover,
-  &:focus {
-    color: map-get($txtcolor, 'text-accent');
+  @include media(max, phone) {
+    &--big {
+      font-size: 24px;
+    }
   }
 }
 
@@ -278,6 +284,10 @@
   margin-top: 64px;
   @include flex-l(10px, flex-start, center);
 
+  @include media(max, phone) {
+    gap: 5px;
+  }
+
   @include media(min, tablet) {
     display: none;
   }
@@ -288,10 +298,19 @@
     padding-right: 10px;
     border-right: 1px solid rgba(33, 33, 33, 0.2);
   }
+  @include media(max, phone) {
+    &:not(:last-child) {
+      padding-right: 5px;
+    }
+  }
 }
 
 .nav-socials__link {
   @extend %link;
   @include font-size(18px, 22px);
   color: map-get($txtcolor, 'text-accent');
+
+  @include media(max, phone) {
+    @include font-size(12px, 16px);
+  }
 }
