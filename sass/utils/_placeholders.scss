@@ -61,9 +61,17 @@
 
 /* =================== section heading pattern =================*/
 %heading {
+  margin-bottom: 30px;
+
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
-  text-align: center;
   color: map-get($txtcolor, 'header');
+  text-align: center;
+
+  @media screen and (min-width: map-get($breakpoints, 'desktop')) {
+    margin-bottom: 50px;
+
+    font-size: 36px;
+  }
 }

@@ -2,6 +2,10 @@
   @extend %section;
   padding-top: 0;
   background-color: map-get($bgcolor, 'main');
+
+  @include media(max, desktop) {
+    display: none;
+  }
 }
 .activities__container {
   @extend %container;

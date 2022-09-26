@@ -38,42 +38,42 @@ button {
 }
 
 /* ================= main placeholders ===============*/
-.benefits__container, .hero__container, .header__container {
+.team__container, .activities__container, .benefits__container, .hero__container, .header__container {
   padding: 0 15px;
   margin: 0 auto;
 }
 @media screen and (min-width: 480px) {
-  .benefits__container, .hero__container, .header__container {
+  .team__container, .activities__container, .benefits__container, .hero__container, .header__container {
     width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
-  .benefits__container, .hero__container, .header__container {
+  .team__container, .activities__container, .benefits__container, .hero__container, .header__container {
     width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .benefits__container, .hero__container, .header__container {
+  .team__container, .activities__container, .benefits__container, .hero__container, .header__container {
     width: 1200px;
   }
 }
 
-.benefits {
+.team, .activities, .benefits {
   padding: 60px 0;
 }
 @media screen and (min-width: 1200px) {
-  .benefits {
+  .team, .activities, .benefits {
     padding: 94px 0;
   }
 }
 
-.benefits__list, .nav-socials, .contacts, .nav__list {
+.socials__list, .team__list, .activities__list, .benefits__list, .nav-socials, .contacts, .nav__list {
   list-style: none;
   margin: 0;
   padding-left: 0;
 }
 
-.nav-socials__link, .contacts__link, .nav__link, .logo {
+.social__link, .nav-socials__link, .contacts__link, .nav__link, .logo {
   text-decoration: none;
   color: #757575;
 }
@@ -100,6 +100,21 @@ button {
 }
 
 /* =================== section heading pattern =================*/
+.team__heading, .activities__heading {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
+  color: #212121;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .team__heading, .activities__heading {
+    margin-bottom: 50px;
+    font-size: 36px;
+  }
+}
+
 /* ====================== line height calculation =======================*/
 /* ============================ flex patterns ===========================*/
 /* ============================= position pattern =======================*/
@@ -620,4 +635,180 @@ button {
 .benefits__text {
   font-size: 14px;
   line-height: 1.7142857143;
+}
+
+.activities {
+  padding-top: 0;
+  background-color: #ffffff;
+}
+@media screen and (max-width: 1199.5px) {
+  .activities {
+    display: none;
+  }
+}
+
+.activities__heading {
+  margin-bottom: 50px;
+}
+
+.activities__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.activities__item {
+  position: relative;
+}
+
+.activities__text {
+  position: absolute;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.team {
+  background-color: #f5f4fa;
+}
+
+@media screen and (min-width: 768px) {
+  .team__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+.team__item {
+  margin-bottom: 30px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199.5px) {
+  .team__item {
+    -ms-flex-preferred-size: calc(50% - 30px);
+        flex-basis: calc(50% - 30px);
+  }
+}
+
+.socials {
+  padding: 16px 0 24px;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .socials {
+    padding: 16px 0 30px;
+  }
+}
+
+.socials__headline {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.1875;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+
+.socials__text {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.1875;
+}
+
+.socials__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: #afb1b8;
+}
+.social__link:hover, .social__link:focus {
+  background-color: #2196f3;
+}
+
+.social__icon {
+  width: 20px;
+  height: 20px;
+  color: inherit;
+  fill: currentColor;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social__link:hover .social__icon, .social__link:focus .social__icon {
+  fill: #ffffff;
 }/*# sourceMappingURL=main.css.map */
