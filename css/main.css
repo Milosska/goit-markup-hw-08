@@ -38,27 +38,36 @@ button {
 }
 
 /* ================= main placeholders ===============*/
-.hero__container, .header__container {
+.benefits__container, .hero__container, .header__container {
   padding: 0 15px;
   margin: 0 auto;
 }
 @media screen and (min-width: 480px) {
-  .hero__container, .header__container {
+  .benefits__container, .hero__container, .header__container {
     width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
-  .hero__container, .header__container {
+  .benefits__container, .hero__container, .header__container {
     width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .hero__container, .header__container {
+  .benefits__container, .hero__container, .header__container {
     width: 1200px;
   }
 }
 
-.nav-socials, .contacts, .nav__list {
+.benefits {
+  padding: 60px 0;
+}
+@media screen and (min-width: 1200px) {
+  .benefits {
+    padding: 94px 0;
+  }
+}
+
+.benefits__list, .nav-socials, .contacts, .nav__list {
   list-style: none;
   margin: 0;
   padding-left: 0;
@@ -70,6 +79,20 @@ button {
 }
 
 /* =================== visually-hidden =================*/
+.benefits__header {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* =================== centerd element pattern =================*/
 .hero__btn, .hero__title, .hero {
   margin-left: auto;
@@ -504,4 +527,97 @@ button {
     padding: 10px 32px;
     min-width: 216px;
   }
+}
+
+.benefits {
+  background-color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .benefits__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .benefits__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+.benefits__item {
+  margin-bottom: 30px;
+}
+.benefits__item::before {
+  content: "";
+  width: 100%;
+  height: 120px;
+  display: inline-block;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
+  background-size: 70px 70px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+@media screen and (min-width: 768px) and (max-width: 1199.5px) {
+  .benefits__item {
+    -ms-flex-preferred-size: calc(50% - 30px);
+        flex-basis: calc(50% - 30px);
+  }
+}
+
+.benefits__antenna::before {
+  background-image: url("../../images/audvantages/antenna.svg");
+}
+
+.benefits__clock::before {
+  background-image: url("../../images/audvantages/clock.svg");
+}
+
+.benefits__diagram::before {
+  background-image: url("../../images/audvantages/diagram.svg");
+}
+
+.benefits__astronaut::before {
+  background-image: url("../../images/audvantages/astronaut.svg");
+}
+
+.benefits__headline {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1428571429;
+  text-transform: uppercase;
+  text-align: center;
+  color: #212121;
+}
+@media screen and (min-width: 768px) {
+  .benefits__headline {
+    text-align: start;
+  }
+}
+
+.benefits__text {
+  font-size: 14px;
+  line-height: 1.7142857143;
 }/*# sourceMappingURL=main.css.map */
