@@ -1,23 +1,33 @@
 .portfolio {
   @extend %section;
 }
+
 .portfolio__container {
   @extend %container;
 }
+
 .portfolio__title {
   @extend %visually-hidden;
 }
 
-/* ==================== buttons list ================ */
+// /* ==================== buttons list ================ */
 .buttons {
   @extend %list;
-  @include flex-m;
-  margin-bottom: 50px;
-}
+  width: 73%;
+  @include flex-m(flex-start, center);
+  flex-wrap: wrap;
+  column-gap: 8px;
+  row-gap: 15px;
+  margin-bottom: 40px;
 
-.buttons__item {
-  &:not(:last-child) {
-    margin-right: 8px;
+  @include media(min, tablet) {
+    width: 100%;
+    margin-bottom: 30px;
+    @include flex-m;
+  }
+
+  @include media(min, desktop) {
+    margin-bottom: 50px;
   }
 }
 
@@ -25,7 +35,6 @@
   display: inline-block;
   padding: 6px 22px;
 
-  font-family: inherit;
   font-weight: 500;
   @include font-size(16px, 26px);
   text-align: center;
@@ -44,19 +53,30 @@
   }
 }
 
-/* ======================= works list ==================== */
+// /* ======================= works list ==================== */
 .works {
   @extend %list;
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -30px;
-  margin-bottom: -30px;
+
+  @include media(min, tablet) {
+    @include flex-m;
+    flex-wrap: wrap;
+    margin-right: -30px;
+    margin-bottom: -30px;
+  }
 }
 
 .works__item {
-  flex-basis: calc(100% / 3 - 30px);
-  margin-right: 30px;
   margin-bottom: 30px;
+
+  @include media(min, tablet) {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-right: 30px;
+  }
+
+  @include media(min, desktop) {
+    flex-basis: calc(100% / 3 - 30px);
+    margin-right: 30px;
+  }
 }
 
 .works__link {
@@ -71,7 +91,28 @@
   }
 }
 
-/* =========================== overlay ======================== */
+// /* =========================== card description ======================== */
+.works__shadow {
+  padding: 20px 24px;
+  border: 1px solid map-get($decolors, 'portfolio-border');
+  border-top: none;
+}
+
+.works__title {
+  margin-bottom: 4px;
+
+  font-weight: 700;
+  @include font-size(18px, 36px);
+  letter-spacing: 0.06em;
+  color: map-get($txtcolor, 'header');
+}
+
+.works__text {
+  @include font-size(16px, 30px);
+  letter-spacing: 0.03em;
+}
+
+// /* =========================== overlay ======================== */
 .works__thumb {
   position: relative;
   overflow: hidden;
@@ -103,24 +144,4 @@
 
   @include font-size(18px, 28px);
   color: map-get($txtcolor, 'effects');
-}
-
-/* =========================== card description ======================== */
-.works__shadow {
-  padding: 20px 24px;
-  border: 1px solid map-get($decolors, 'portfolio-border');
-  border-top: none;
-}
-
-.works__title {
-  margin-bottom: 4px;
-  font-weight: 700;
-  @include font-size(18px, 36px);
-  letter-spacing: 0.06em;
-  color: map-get($txtcolor, 'header');
-}
-
-.works__text {
-  @include font-size(16px, 30px);
-  letter-spacing: 0.03em;
 }

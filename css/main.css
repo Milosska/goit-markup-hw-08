@@ -42,48 +42,48 @@ button {
   font-style: normal;
 }
 
-.partners__container, .team__container, .activities__container, .benefits__container, .hero__container, .footer__container, .header__container {
+.portfolio__container, .partners__container, .team__container, .activities__container, .benefits__container, .hero__container, .footer__container, .header__container {
   padding: 0 15px;
   margin: 0 auto;
 }
 @media screen and (min-width: 480px) {
-  .partners__container, .team__container, .activities__container, .benefits__container, .hero__container, .footer__container, .header__container {
+  .portfolio__container, .partners__container, .team__container, .activities__container, .benefits__container, .hero__container, .footer__container, .header__container {
     width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
-  .partners__container, .team__container, .activities__container, .benefits__container, .hero__container, .footer__container, .header__container {
+  .portfolio__container, .partners__container, .team__container, .activities__container, .benefits__container, .hero__container, .footer__container, .header__container {
     width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .partners__container, .team__container, .activities__container, .benefits__container, .hero__container, .footer__container, .header__container {
+  .portfolio__container, .partners__container, .team__container, .activities__container, .benefits__container, .hero__container, .footer__container, .header__container {
     width: 1200px;
   }
 }
 
-.partners, .team, .activities, .benefits {
+.portfolio, .partners, .team, .activities, .benefits {
   padding: 60px 0;
 }
 @media screen and (min-width: 1200px) {
-  .partners, .team, .activities, .benefits {
+  .portfolio, .partners, .team, .activities, .benefits {
     padding: 94px 0;
   }
 }
 
-.partners__list, .socials__list, .team__list, .activities__list, .benefits__list, .connections__list, .address__list, .nav-socials, .contacts, .nav__list {
+.works, .buttons, .partners__list, .socials__list, .team__list, .activities__list, .benefits__list, .connections__list, .address__list, .nav-socials, .contacts, .nav__list {
   list-style: none;
   margin: 0;
   padding-left: 0;
 }
 
-.partners__link, .social__link, .address__link, .nav-socials__link, .contacts__link, .nav__link, .logo {
+.works__link, .partners__link, .social__link, .address__link, .nav-socials__link, .contacts__link, .nav__link, .logo {
   text-decoration: none;
   color: #757575;
 }
 
 /* =================== visually-hidden =================*/
-.benefits__header {
+.portfolio__title, .benefits__header {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -1159,4 +1159,174 @@ button {
   color: #2196f3;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.buttons {
+  width: 73%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 8px;
+     -moz-column-gap: 8px;
+          column-gap: 8px;
+  row-gap: 15px;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .buttons {
+    width: 100%;
+    margin-bottom: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .buttons {
+    margin-bottom: 50px;
+  }
+}
+
+.buttons__btn {
+  display: inline-block;
+  padding: 6px 22px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.625;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  background-color: #f5f4fa;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.buttons__btn:hover, .buttons__btn:focus {
+  color: #ffffff;
+  background-color: #2196f3;
+  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+@media screen and (min-width: 768px) {
+  .works {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-right: -30px;
+    margin-bottom: -30px;
+  }
+}
+
+.works__item {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .works__item {
+    -ms-flex-preferred-size: calc(50% - 30px);
+        flex-basis: calc(50% - 30px);
+    margin-right: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .works__item {
+    -ms-flex-preferred-size: calc(33.3333333333% - 30px);
+        flex-basis: calc(33.3333333333% - 30px);
+    margin-right: 30px;
+  }
+}
+
+.works__link {
+  -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.works__link:hover, .works__link:focus {
+  display: block;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.works__shadow {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top: none;
+}
+
+.works__title {
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: #212121;
+}
+
+.works__text {
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.03em;
+}
+
+.works__thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.works__overlay {
+  position: absolute;
+  bottom: 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  opacity: 0;
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+}
+.works__link:hover .works__overlay, .works__link:focus .works__overlay {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+.works__explanation {
+  display: inline-block;
+  padding: 0 24px;
+  font-size: 18px;
+  line-height: 1.5555555556;
+  color: #ffffff;
 }/*# sourceMappingURL=main.css.map */
