@@ -1,34 +1,74 @@
 .footer {
-  background-color: map-get($bgcolor, 'footer');
   padding: 60px 0;
+  background-color: map-get($bgcolor, 'footer');
 }
+
 .footer__container {
   @extend %container;
-  @include flex-s(baseline);
+
+  @include media(min, desktop) {
+    @include flex-s(baseline);
+  }
 }
+
+.footer__thumb {
+  @include media(min, tablet) {
+    @include flex-l(165px, center, baseline);
+    margin-bottom: 60px;
+  }
+
+  @include media(min, desktop) {
+    @include flex-l(70px, center, baseline);
+    margin-bottom: 0;
+  }
+}
+
 .address__wrap {
-  margin-right: 70px;
+  margin-bottom: 60px;
+  text-align: center;
+
+  @include media(min, tablet) {
+    margin-bottom: 0;
+  }
+
+  @include media(min, desktop) {
+    text-align: left;
+  }
 }
+
 .footer__logo {
+  @extend %centred;
   display: inline-block;
+  padding: 0;
   margin-bottom: 20px;
+
+  @include media(min, tablet) {
+    margin: 0 0 20px 0;
+  }
 }
+
 .logo--white {
   color: map-get($txtcolor, 'effects');
 }
+
 .address__list {
   @extend %address;
   @extend %list;
+  @extend %centred;
 }
+
 .address__item {
   @include font-size(14px, 24px);
 
   &:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+
+    // margin-bottom: 10px;
   }
 }
 .address__link {
   @extend %link;
+
   color: map-get($txtcolor, 'footer-contacts');
   @include animation(color);
 
@@ -42,8 +82,22 @@
   }
 }
 
-/*------------------------------ social links ---------------------------*/
+// /*------------------------------ social links ---------------------------*/
+.connections {
+  margin-bottom: 60px;
+  text-align: center;
+
+  @include media(min, tablet) {
+    margin-bottom: 0;
+  }
+
+  @include media(min, desktop) {
+    text-align: left;
+  }
+}
+
 .connections__title {
+  @extend %centred;
   margin-bottom: 20px;
 
   font-weight: 700;
@@ -51,23 +105,33 @@
   text-transform: uppercase;
   color: map-get($txtcolor, 'effects');
 }
+
 .connections__list {
   @extend %list;
   @include flex-l(10px);
 }
+
 .connections__link {
   color: map-get($txtcolor, 'footer-links');
   @include socials(map-get($bgcolor, 'footer-links'), map-get($decolors, 'btn-accent'));
 }
+
 .connections__icon {
   @include svg(20px, 20px);
 }
 
-/*------------------------------ footer form ---------------------------*/
+// /*------------------------------ footer form ---------------------------*/
 .subscribe {
-  margin-left: auto;
+  text-align: center;
+
+  @include media(min, desktop) {
+    text-align: left;
+    margin-left: auto;
+  }
 }
+
 .subscribe__name {
+  @extend %centred;
   margin-bottom: 20px;
 
   font-weight: 700;
@@ -75,25 +139,28 @@
   text-transform: uppercase;
   color: map-get($txtcolor, 'effects');
 }
-.subscribe__label {
-  @include flex-l(12px);
-}
-.subscribe__imput {
-  width: 358px;
-  padding: 15px;
-  background-color: map-get($bgcolor, 'footer');
 
+.subscribe__label {
+  @include media(min, desktop) {
+    @include flex-l(12px);
+  }
+}
+
+.subscribe__imput {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+
+  background-color: map-get($bgcolor, 'footer');
   outline: none;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  @include animation(border-color);
 
   color: map-get($txtcolor, 'effects');
 
-  @include animation(border-color);
-
   &::placeholder {
-    font-size: 16px;
     @include font-size(16px, 20px);
     color: rgba(255, 255, 255, 0.6);
   }
@@ -101,6 +168,15 @@
   &:focus,
   &:focus-within {
     border: 1px solid map-get($decolors, 'btn-accent');
+  }
+
+  @include media(min, tablet) {
+    width: 450px;
+
+    @include media(min, desktop) {
+      width: 358px;
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -111,12 +187,12 @@
   background-color: map-get($decolors, 'btn-accent');
 
   font-weight: 700;
-  font-size: 16px;
   @include font-size(16px, 30px);
   letter-spacing: 0.06em;
   color: map-get($txtcolor, 'effects');
 }
+
 .subscribe__icon {
   @include svg(24px, 24px);
-  margin-left: 10px;
+  margin-left: 12px;
 }
