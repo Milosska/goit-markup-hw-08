@@ -58,7 +58,7 @@
   @extend %list;
 
   @include media(min, tablet) {
-    @include flex-m;
+    @include flex-m(flex-start, center);
     flex-wrap: wrap;
     margin-right: -30px;
     margin-bottom: -30px;
