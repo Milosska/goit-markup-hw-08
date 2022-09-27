@@ -1,23 +1,42 @@
 .partners {
   @extend %section;
 }
+
 .partners__container {
   @extend %container;
 }
+
 .partners__heading {
   @extend %heading;
-  margin-bottom: 50px;
 }
+
 .partners__list {
   @extend %list;
   @include flex-l(30px);
+  flex-wrap: wrap;
+
+  @include media(min, desktop) {
+    flex-wrap: nowrap;
+  }
 }
+
+.partners__item {
+  flex-basis: calc((100% - 30px) / 2);
+
+  @include media(min, tablet) {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+
+  @include media(min, desktop) {
+    flex-basis: calc((100% - 150px) / 6);
+  }
+}
+
 .partners__link {
   @extend %link;
-  display: block;
-  width: 170px;
-  height: 92px;
 
+  display: block;
+  height: 92px;
   @include flex-m;
 
   color: map-get($decolors, 'social-icons');
@@ -31,6 +50,7 @@
     border: 1px solid map-get($txtcolor, 'text-accent');
   }
 }
+
 .partners__icon {
   @include svg(106px, 60px);
 
