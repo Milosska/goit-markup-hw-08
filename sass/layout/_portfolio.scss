@@ -96,6 +96,12 @@
   padding: 20px 24px;
   border: 1px solid map-get($decolors, 'portfolio-border');
   border-top: none;
+
+  @media screen and (min-width: map-get($breakpoints, 'tablet')) and (max-width: map-get($breakpoints, 'desktop')) {
+    &--huge {
+      padding-bottom: 56px;
+    }
+  }
 }
 
 .works__title {
