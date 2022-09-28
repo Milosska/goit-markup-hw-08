@@ -48,7 +48,7 @@ $pictureList: 'antenna', 'clock', 'diagram', 'astronaut';
 
 @each $picture in $pictureList {
   .benefits__#{$picture}::before {
-    background-image: url('../../images/audvantages/#{$picture}.svg');
+    background-image: url('../images/audvantages/#{$picture}.svg');
   }
 }
 

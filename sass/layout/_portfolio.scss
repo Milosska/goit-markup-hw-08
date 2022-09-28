@@ -97,7 +97,7 @@
   border: 1px solid map-get($decolors, 'portfolio-border');
   border-top: none;
 
-  @media screen and (min-width: map-get($breakpoints, 'tablet')) and (max-width: map-get($breakpoints, 'desktop')) {
+  @media screen and (min-width: map-get($breakpoints, 'tablet')) and (max-width: map-get($breakpoints, 'desktop') - 0.5px) {
     &--huge {
       padding-bottom: 56px;
     }

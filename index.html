@@ -199,7 +199,7 @@
           <h2 class="activities__heading">Чим ми займаємося</h2>
           <ul class="activities__list">
             <li class="activities__item">
-              <picture class="activities__img">
+              <picture>
                 <source
                   srcset="
                     ./images/activities/1.webp   1x,
@@ -217,6 +217,7 @@
                   type="image/jpeg"
                 />
                 <img
+                  class="activities__img"
                   src="./images/activities/1.jpg"
                   alt="Людина робить проект за допомогою планшета"
                 />
@@ -224,7 +225,7 @@
               <p class="activities__text">Десктопні додатки</p>
             </li>
             <li class="activities__item">
-              <picture class="activities__img">
+              <picture>
                 <source
                   srcset="
                     ./images/activities/2.webp   1x,
@@ -242,6 +243,7 @@
                   type="image/jpeg"
                 />
                 <img
+                  class="activities__img"
                   src="./images/activities/2.jpg"
                   alt="Людина обирає дизайн застосунку для телефона"
                 />
@@ -249,7 +251,7 @@
               <p class="activities__text">Мобільні додатки</p>
             </li>
             <li class="activities__item">
-              <picture class="activities__img">
+              <picture>
                 <source
                   srcset="
                     ./images/activities/3.webp   1x,
@@ -267,6 +269,7 @@
                   type="image/jpeg"
                 />
                 <img
+                  class="activities__img"
                   src="./images/activities/3.jpg"
                   alt="Людина тримає планшет з палеткою кольорів"
                 />
@@ -282,15 +285,14 @@
           <h2 class="team__heading">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <picture class="team__img">
+              <picture>
                 <source
                   srcset="
-                    ./images/team/1-min        1x,
+                    ./images/team/1-min.webp   1x,
                     ./images/team/1@2-min.webp 2x,
                     ./images/team/1@3-min.webp 3x
                   "
                   type="image/webp"
-                  sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
                 />
                 <source
                   srcset="
@@ -299,9 +301,13 @@
                     ./images/team/1@3-min.jpg 3x
                   "
                   type="image/jpeg"
-                  sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px, 100vw"
                 />
-                <img src="./images/team/1-min.jpg" alt="Фото чоловіка в окулярах" />
+                <img
+                  class="team__img"
+                  src="./images/team/1-min.jpg"
+                  alt="Фото чоловіка в окулярах"
+                />
               </picture>
               <div class="socials">
                 <h3 class="socials__headline">Ігор Дем'яненко</h3>
@@ -363,7 +369,7 @@
               </div>
             </li>
             <li class="team__item">
-              <picture class="team__img">
+              <picture>
                 <source
                   srcset="
                     ./images/team/2-min.webp   1x,
@@ -382,7 +388,7 @@
                   type="image/jpeg"
                   sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
                 />
-                <img src="./images/team/2-min.jpg" alt="Фото жінки" />
+                <img class="team__img" src="./images/team/2-min.jpg" alt="Фото жінки" />
               </picture>
               <div class="socials">
                 <h3 class="socials__headline">Ольга Рєпіна</h3>
@@ -444,7 +450,7 @@
               </div>
             </li>
             <li class="team__item">
-              <picture class="team__img">
+              <picture>
                 <source
                   srcset="
                     ./images/team/3-min.webp   1x,
@@ -463,7 +469,7 @@
                   type="image/jpeg"
                   sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
                 />
-                <img src="./images/team/3-min.jpg" alt="Фото чоловіка" />
+                <img class="team__img" src="./images/team/3-min.jpg" alt="Фото чоловіка" />
               </picture>
               <div class="socials">
                 <h3 class="socials__headline">Микола Тарасов</h3>
@@ -525,7 +531,7 @@
               </div>
             </li>
             <li class="team__item">
-              <picture class="team__img">
+              <picture>
                 <source
                   srcset="
                     ./images/team/4-min.webp   1x,
@@ -544,7 +550,11 @@
                   type="image/jpeg"
                   sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
                 />
-                <img src="./images/team/4-min.jpg" alt="Фото чоловіка в окулярах" />
+                <img
+                  class="team__img"
+                  src="./images/team/4-min.jpg"
+                  alt="Фото чоловіка в окулярах"
+                />
               </picture>
               <div class="socials">
                 <h3 class="socials__headline">Михайло Єрмаков</h3>
@@ -866,6 +876,12 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
