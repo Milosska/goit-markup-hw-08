@@ -92,26 +92,37 @@
 }
 
 .menu {
+  position: relative;
+
   font-weight: 500;
   letter-spacing: 0.02em;
 }
 
 .nav__content {
   @include media(max, tablet) {
-    display: none;
+    // display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    transform: translateX(100%);
+    @include animation(transform);
 
     .menu.is-open & {
-      display: block;
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       z-index: 10;
 
+      display: flex;
+      flex-direction: column;
+
       padding: 48px 40px;
       width: 100%;
-      height: 796px;
+      height: 100%;
 
       background-color: map-get($bgcolor, 'main');
+
+      transform: translateX(0);
     }
   }
 
@@ -122,6 +133,10 @@
 
 .nav__list {
   @extend %list;
+
+  @include media(max, tablet) {
+    margin-bottom: auto;
+  }
 
   @include media(min, tablet) {
     display: flex;
@@ -188,9 +203,9 @@
 .contacts {
   @extend %list;
 
-  @include media(max, tablet) {
-    padding-top: 302px;
-  }
+  // @include media(max, tablet) {
+  //   padding-top: 302px;
+  // }
 
   @include media(min, tablet) {
     display: flex;
