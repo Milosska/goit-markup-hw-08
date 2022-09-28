@@ -100,7 +100,6 @@
 
 .nav__content {
   @include media(max, tablet) {
-    // display: none;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -202,10 +201,6 @@
 
 .contacts {
   @extend %list;
-
-  // @include media(max, tablet) {
-  //   padding-top: 302px;
-  // }
 
   @include media(min, tablet) {
     display: flex;
