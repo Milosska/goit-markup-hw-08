@@ -199,33 +199,78 @@
           <h2 class="activities__heading">Чим ми займаємося</h2>
           <ul class="activities__list">
             <li class="activities__item">
-              <img
-                class="activities__img"
-                src="./images/box-1.jpg"
-                alt="Людина робить проект за допомогою планшета"
-                width="370"
-                height="294"
-              />
+              <picture class="activities__img">
+                <source
+                  srcset="
+                    ./images/activities/1.webp   1x,
+                    ./images/activities/1@2.webp 2x,
+                    ./images/activities/1@3.webp 3x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/activities/1.jpg   1x,
+                    ./images/activities/1@2.jpg 2x,
+                    ./images/activities/1@3.jpg 3x
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  src="./images/activities/1.jpg"
+                  alt="Людина робить проект за допомогою планшета"
+                />
+              </picture>
               <p class="activities__text">Десктопні додатки</p>
             </li>
             <li class="activities__item">
-              <img
-                class="activities__img"
-                src="./images/box-2.jpg"
-                alt="Людина обирає дизайн застосунку для телефона"
-                width="370"
-                height="294"
-              />
+              <picture class="activities__img">
+                <source
+                  srcset="
+                    ./images/activities/2.webp   1x,
+                    ./images/activities/2@2.webp 2x,
+                    ./images/activities/2@3.webp 3x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/activities/2.jpg   1x,
+                    ./images/activities/2@2.jpg 2x,
+                    ./images/activities/2@3.jpg 3x
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  src="./images/activities/2.jpg"
+                  alt="Людина обирає дизайн застосунку для телефона"
+                />
+              </picture>
               <p class="activities__text">Мобільні додатки</p>
             </li>
             <li class="activities__item">
-              <img
-                class="activities__img"
-                src="./images/box-3.jpg"
-                alt="Людина тримає планшет з палеткою кольорів"
-                width="370"
-                height="294"
-              />
+              <picture class="activities__img">
+                <source
+                  srcset="
+                    ./images/activities/3.webp   1x,
+                    ./images/activities/3@2.webp 2x,
+                    ./images/activities/3@3.webp 3x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/activities/3.jpg   1x,
+                    ./images/activities/3@2.jpg 2x,
+                    ./images/activities/3@3.jpg 3x
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  src="./images/activities/3.jpg"
+                  alt="Людина тримає планшет з палеткою кольорів"
+                />
+              </picture>
               <p class="activities__text">Дизайнерські рішення</p>
             </li>
           </ul>
