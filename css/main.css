@@ -396,6 +396,12 @@ button {
   font-size: 12px;
   line-height: 1.1666666667;
 }
+@media screen and (min-width: 1200px) {
+  .contacts__link {
+    font-size: 14px;
+    line-height: 1.1428571429;
+  }
+}
 .contacts__link:hover, .contacts__link:focus {
   color: #2196f3;
 }
@@ -1194,9 +1200,6 @@ button {
   }
 }
 
-.benefits__item {
-  margin-bottom: 30px;
-}
 .benefits__item::before {
   content: "";
   width: 100%;
@@ -1208,10 +1211,15 @@ button {
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
+@media screen and (max-width: 767.5px) {
+  .benefits__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1199.5px) {
   .benefits__item {
-    -ms-flex-preferred-size: calc(50% - 30px);
-        flex-basis: calc(50% - 30px);
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
   }
 }
 
@@ -1340,16 +1348,20 @@ button {
 }
 
 .team__item {
-  margin-bottom: 30px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+@media screen and (max-width: 767.5px) {
+  .team__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1199.5px) {
   .team__item {
-    -ms-flex-preferred-size: calc(50% - 30px);
-        flex-basis: calc(50% - 30px);
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
   }
 }
 
@@ -1499,7 +1511,6 @@ button {
 }
 
 .buttons {
-  width: 73%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1580,6 +1591,11 @@ button {
 
 .works__item {
   margin-bottom: 30px;
+}
+@media screen and (max-width: 767.5px) {
+  .works__item:last-child {
+    margin-bottom: 0;
+  }
 }
 @media screen and (min-width: 768px) {
   .works__item {

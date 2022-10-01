@@ -235,6 +235,10 @@
   @include flex-s;
   @include font-size(12px, 14px);
 
+  @include media(min, desktop) {
+    @include font-size(14px, 16px);
+  }
+
   &:hover,
   &:focus {
     color: map-get($txtcolor, 'text-accent');

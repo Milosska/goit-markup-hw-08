@@ -23,6 +23,10 @@
   align-items: $y;
 }
 
+@mixin flex-basis($n, $gap) {
+  flex-basis: calc((100% - ($gap * ($n - 1))) / $n);
+}
+
 /* ============================= position pattern =======================*/
 @mixin position($position: absolute, $top: 0, $left: 0) {
   position: $position;

@@ -26,8 +26,6 @@
 }
 
 .benefits__item {
-  margin-bottom: 30px;
-
   &::before {
     @include pseudo(100%, 120px);
     display: inline-block;
@@ -39,8 +37,14 @@
     background-position: 50% 50%;
   }
 
+  &:not(:last-child) {
+    @include media(max, tablet) {
+      margin-bottom: 30px;
+    }
+  }
+
   @media screen and (min-width: map-get($breakpoints, 'tablet')) and (max-width: (map-get($breakpoints, 'desktop')) - 0.5px) {
-    flex-basis: calc(100% / 2 - 30px);
+    @include flex-basis(2, 30px);
   }
 }
 

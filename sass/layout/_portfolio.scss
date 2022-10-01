@@ -13,7 +13,6 @@
 // /* ==================== buttons list ================ */
 .buttons {
   @extend %list;
-  width: 73%;
   @include flex-m(flex-start, center);
   flex-wrap: wrap;
   column-gap: 8px;
@@ -67,6 +66,12 @@
 
 .works__item {
   margin-bottom: 30px;
+
+  @include media(max, tablet) {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 
   @include media(min, tablet) {
     flex-basis: calc(100% / 2 - 30px);
