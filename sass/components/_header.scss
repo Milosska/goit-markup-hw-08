@@ -1,5 +1,4 @@
 .header {
-  position: relative;
   border-bottom: 1px solid map-get($decolors, 'header-line');
 }
 
@@ -92,35 +91,29 @@
 }
 
 .menu {
-  position: relative;
-
   font-weight: 500;
   letter-spacing: 0.02em;
 }
 
 .nav__content {
   @include media(max, tablet) {
-    position: absolute;
+    position: fixed;
     top: 0;
-    bottom: 0;
+    left: 0;
+    z-index: 10;
     transform: translateX(100%);
     @include animation(transform);
 
+    display: flex;
+    flex-direction: column;
+
+    padding: 48px 40px;
+    width: 100%;
+    height: 100%;
+
+    background-color: map-get($bgcolor, 'main');
+
     .menu.is-open & {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 10;
-
-      display: flex;
-      flex-direction: column;
-
-      padding: 48px 40px;
-      width: 100%;
-      height: 100%;
-
-      background-color: map-get($bgcolor, 'main');
-
       transform: translateX(0);
     }
   }
