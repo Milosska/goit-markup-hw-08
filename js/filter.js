@@ -1,11 +1,15 @@
-console.log('Hello!');
 import { galleryItems } from './gallery-items.js';
+
 // Крок 1 - HTML розмітка
+
 const galleryEl = document.querySelector('.works');
-const galleryMarkup = galleryItems
-  .map(
-    ({ smallImgName, mediumImgName, bigImgName, explanation, title, type }) =>
-      `<li class="works__item">
+makeMarkup(galleryItems);
+
+function makeMarkup(array) {
+  const markup = array
+    .map(
+      ({ smallImgName, mediumImgName, bigImgName, explanation, title, type }) =>
+        `<li class="works__item">
               <a class="works__link" href="#">
                 <div class="works__thumb">
                   <picture>
@@ -84,23 +88,32 @@ const galleryMarkup = galleryItems
                 </div>
               </a>
             </li>`
-  )
-  .join('');
+    )
+    .join('');
 
-galleryEl.innerHTML = galleryMarkup;
+  galleryEl.innerHTML = markup;
+}
 
-// Опрацювання кліку
+// Крок 2 - Опрацювання кліку
 
-// const buttonsList = document.querySelector('.buttons');
-// const worksList = document.querySelectorAll('.works__item');
-// buttonsList.addEventListener('click', onBtnClick);
+const buttonsList = document.querySelector('.buttons');
 
-// function onBtnClick(evt) {
-//   if (!evt.target.classList.contains('buttons__btn')) {
-//     return;
-//   }
+buttonsList.addEventListener('click', onBtnClick);
 
-//   // worksList.filter((work));
-//   console.log(worksList[0]);
-//   //   console.log(worksList[0].querySelector('.works__text'));
-// }
+function onBtnClick(evt) {
+  if (!evt.target.classList.contains('buttons__btn')) {
+    return;
+  }
+
+  if (evt.target.textContent === 'Усі') {
+    makeMarkup(galleryItems);
+    return;
+  }
+
+  const filtredItems = galleryItems.filter(
+    ({ type }) =>
+      type.toLowerCase().slice(0, 4) === evt.target.textContent.toLowerCase().slice(0, 4)
+  );
+
+  makeMarkup(filtredItems);
+}
